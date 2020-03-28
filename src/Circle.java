@@ -63,6 +63,11 @@ public class Circle extends Geometric {
         return "A Circle with radius = "
                 + radius
                 + ", which is a subclass of "
-                + super.toString();
+                + super.toString()
+                + "\n"
+                + "Perimeter = "
+                + super.decimalFormat.format(getPerimeter())
+                + " - Area = "
+                + super.decimalFormat.format(getArea());
     }
 }

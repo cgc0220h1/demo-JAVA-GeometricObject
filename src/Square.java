@@ -55,9 +55,14 @@ public class Square extends Geometric {
 
     @Override
     public String toString() {
-        return "A square with side ="
+        return "A square with side = "
                 + side
                 + ", which is a subclass of "
-                + super.toString();
+                + super.toString()
+                + "\n"
+                + "Perimeter = "
+                + super.decimalFormat.format(getPerimeter())
+                + " - Area = "
+                + super.decimalFormat.format(getArea());
     }
 }

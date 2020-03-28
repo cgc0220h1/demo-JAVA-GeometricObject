@@ -69,9 +69,14 @@ public class Rectangle extends Geometric {
     public String toString() {
         return "A rectangle with width = "
                 + width
-                + "and length ="
+                + " and length = "
                 + length
                 + ", which is a subclass of "
-                + super.toString();
+                + super.toString()
+                + "\n"
+                + "Perimeter = "
+                + super.decimalFormat.format(getPerimeter())
+                + " - Area = "
+                + super.decimalFormat.format(getArea());
     }
 }

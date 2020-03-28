@@ -1,8 +1,11 @@
+import java.text.DecimalFormat;
+
 public class Geometric {
     private String color;
     private boolean filled;
     private double area;
     private double perimeter;
+    DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     public Geometric() {
         color = "green";
