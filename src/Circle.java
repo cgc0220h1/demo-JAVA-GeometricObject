@@ -70,4 +70,17 @@ public class Circle extends Geometric {
                 + " - Area = "
                 + super.decimalFormat.format(getArea());
     }
+
+    @Override
+    public void inputData() {
+        super.inputData();
+        System.out.print("Enter radius: ");
+        setRadius(super.scanner.nextDouble());
+    }
+
+    @Override
+    public void displayData() {
+        super.displayData();
+        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
+    }
 }

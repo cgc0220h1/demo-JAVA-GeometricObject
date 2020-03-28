@@ -1,4 +1,4 @@
-public class Triangle extends Geometric {
+public class Triangle extends Geometric implements IGeometric {
     private double side1;
     private double side2;
     private double side3;
@@ -58,6 +58,28 @@ public class Triangle extends Geometric {
                 * (halfPerimeter - side3));
     }
 
+    public void setSide1(double side1) {
+        this.side1 = side1;
+    }
+
+    public void setSide2(double side2) {
+        this.side2 = side2;
+    }
+
+    public void setSide3(double side3) {
+        this.side3 = side3;
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
+    public void setFilled(boolean filled) {
+        super.setFilled(filled);
+    }
+
     @Override
     public String toString() {
         return "A Triangle with side1 = "
@@ -73,5 +95,18 @@ public class Triangle extends Geometric {
                 + super.decimalFormat.format(getPerimeter())
                 + " - Area = "
                 + super.decimalFormat.format(getArea());
+    }
+
+    public void inputData() {
+        System.out.print("Enter side 1: ");
+        setSide1(super.scanner.nextDouble());
+        System.out.print("Enter side 2: ");
+        setSide2(super.scanner.nextDouble());
+        System.out.print("Enter side 3: ");
+        setSide3(super.scanner.nextDouble());
+    }
+
+    public void displayData() {
+        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
     }
 }

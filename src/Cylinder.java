@@ -1,4 +1,4 @@
-public class Cylinder extends Circle {
+public class Cylinder extends Circle implements IGeometric {
     private double height;
     private static final int COEFFICIENT = 2;
 
@@ -86,5 +86,17 @@ public class Cylinder extends Circle {
                 + super.decimalFormat.format(getTotalArea())
                 + " - Volume = "
                 + super.decimalFormat.format(getVolume());
+    }
+
+    public void inputData() {
+        super.inputData();
+        System.out.print("Enter height: ");
+        setHeight(super.scanner.nextDouble());
+    }
+
+    public void displayData() {
+        super.displayData();
+        System.out.printf("Surface Area: %.2f - Total Area: %.2f - Volume: %.2f \n \n"
+                ,getSurfaceArea(),getTotalArea(),getVolume());
     }
 }

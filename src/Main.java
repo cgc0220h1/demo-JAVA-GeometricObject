@@ -1,58 +1,62 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //Test class Geometric
+        Scanner scanner = new Scanner(System.in);
         Geometric shape = new Geometric();
-        System.out.println(shape);
-        shape = new Geometric("red", false);
-        System.out.println(shape);
-        System.out.println();
+        int choice;
+        boolean isExit = false;
 
-        //Test class Circle
-        Circle circle = new Circle();
-        System.out.println(circle);
-        circle = new Circle(3.5);
-        System.out.println(circle);
-        circle = new Circle("indigo", false, 10);
-        System.out.println(circle);
-        System.out.println();
+        do {
+            System.out.println("Calculate Area/Perimeter/Volume: ");
+            System.out.println("1. Rectangle");
+            System.out.println("2. Square");
+            System.out.println("3. Triangle");
+            System.out.println("4. Circle");
+            System.out.println("5. Cylinder");
+            System.out.println("6. Test Case");
+            System.out.println("0. Exit program");
+            System.out.print("Enter choice: ");
+            choice = scanner.nextInt();
+            if (choice != 0
+                    && choice != 1
+                    && choice != 2
+                    && choice != 3
+                    && choice != 4
+                    && choice != 5
+                    && choice != 6) {
+                System.out.println("Invalid choice! Please choose again.");
+                System.out.println();
 
-        //Test class Rectangle
-        Rectangle rectangle = new Rectangle();
-        System.out.println(rectangle);
-        rectangle = new Rectangle(2.3,5.8);
-        System.out.println(rectangle);
-        rectangle = new Rectangle("orange", true, 2.3, 5.8);
-        System.out.println(rectangle);
-        System.out.println();
+            } else {
 
-        //Test class Square
-        Square square = new Square();
-        System.out.println(square);
-        square = new Square(2.3);
-        System.out.println(square);
-        square = new Square("yellow", true, 5.8);
-        System.out.println(square);
-        System.out.println();
-
-        //Test class Cylinder
-        Cylinder cylinder = new Cylinder();
-        System.out.println(cylinder);
-        cylinder = new Cylinder(8);
-        System.out.println(cylinder);
-        cylinder = new Cylinder(3.6,10);
-        System.out.println(cylinder);
-        cylinder = new Cylinder("black", true, 2.1,20);
-        System.out.println(cylinder);
-        System.out.println();
-
-        //Test class Triangle
-        Triangle triangle = new Triangle();
-        System.out.println(triangle);
-        triangle = new Triangle(3,4,5);
-        System.out.println(triangle);
-        triangle = new Triangle("pink", false, 3,4,5);
-        System.out.println(triangle);
-        System.out.println();
-
+                switch (choice) {
+                    case 1:
+                        shape = new Rectangle();
+                        break;
+                    case 2:
+                        shape = new Square();
+                        break;
+                    case 3:
+                        shape = new Triangle();
+                        break;
+                    case 4:
+                        shape = new Circle();
+                        break;
+                    case 5:
+                        shape = new Cylinder();
+                        break;
+                    case 0:
+                        System.out.println("Exit program!");
+                        isExit = true;
+                        break;
+                    case 6:
+                        shape.testCase();
+                        break;
+                }
+                shape.inputData();
+                shape.displayData();
+            }
+        } while (!isExit);
     }
 }

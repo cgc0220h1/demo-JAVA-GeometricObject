@@ -1,4 +1,4 @@
-public class Rectangle extends Geometric {
+public class Rectangle extends Geometric implements IGeometric {
     private double width;
     private double length;
     private static final int COEFFICIENT = 2;
@@ -78,5 +78,16 @@ public class Rectangle extends Geometric {
                 + super.decimalFormat.format(getPerimeter())
                 + " - Area = "
                 + super.decimalFormat.format(getArea());
+    }
+
+    public void inputData() {
+        System.out.print("Enter width: ");
+        setWidth(super.scanner.nextDouble());
+        System.out.print("Enter length: ");
+        setLength(super.scanner.nextDouble());
+    }
+
+    public void displayData() {
+        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
     }
 }
