@@ -1,6 +1,8 @@
 public class Geometric {
     private String color;
     private boolean filled;
+    private double area;
+    private double perimeter;
 
     public Geometric() {
         color = "green";
@@ -14,6 +16,14 @@ public class Geometric {
 
     public boolean getFilled() {
         return filled;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
     }
 
     public String getColor() {
