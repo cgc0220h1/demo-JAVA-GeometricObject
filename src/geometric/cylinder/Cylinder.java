@@ -95,13 +95,13 @@ public class Cylinder extends Circle {
 
     @Override
     public void inputData() {
+        super.inputData();
         System.out.print("Enter height: ");
         setHeight(super.scanner.nextDouble());
     }
 
     @Override
     public void displayData() {
-        System.out.println("Here is the result: ");
         System.out.printf("Surface Area: %.2f - Total Area: %.2f - Volume: %.2f \n \n"
                 , getSurfaceArea(), getTotalArea(), getVolume());
     }
