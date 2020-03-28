@@ -1,3 +1,7 @@
+package geometric.triangle;
+
+import geometric.Geometric;
+
 public class Triangle extends Geometric {
     private double side1;
     private double side2;
@@ -16,7 +20,8 @@ public class Triangle extends Geometric {
     }
 
     public Triangle(String color, boolean filled, double side1, double side2, double side3) {
-        super(color, filled);
+        super.setColor(color);
+        super.setFilled(filled);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -82,7 +87,7 @@ public class Triangle extends Geometric {
 
     @Override
     public String toString() {
-        return "A Triangle with side1 = "
+        return "A geometric.triangle.Triangle with side1 = "
                 + side1
                 + ", side2 = "
                 + side2
@@ -109,6 +114,18 @@ public class Triangle extends Geometric {
 
     @Override
     public void displayData() {
-        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
+        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n", getPerimeter(), getArea());
+    }
+
+    @Override
+    public void testCase() {
+        //Test class geometric.triangle.Triangle
+        Geometric triangle = new Triangle();
+        System.out.println(triangle);
+        triangle = new Triangle(3, 4, 5);
+        System.out.println(triangle);
+        triangle = new Triangle("pink", false, 3, 4, 5);
+        System.out.println(triangle);
+        System.out.println();
     }
 }

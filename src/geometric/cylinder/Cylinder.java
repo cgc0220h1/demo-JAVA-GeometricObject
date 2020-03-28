@@ -1,3 +1,8 @@
+package geometric.cylinder;
+
+import geometric.Geometric;
+import geometric.circle.Circle;
+
 public class Cylinder extends Circle {
     private double height;
     private static final int COEFFICIENT = 2;
@@ -72,7 +77,7 @@ public class Cylinder extends Circle {
 
     @Override
     public String toString() {
-        return "A Cylinder with height = "
+        return "A geometric.cylinder.Cylinder with height = "
                 + height
                 + " and radius = "
                 + super.getRadius()
@@ -90,7 +95,6 @@ public class Cylinder extends Circle {
 
     @Override
     public void inputData() {
-        super.inputData();
         System.out.print("Enter height: ");
         setHeight(super.scanner.nextDouble());
     }
@@ -100,5 +104,19 @@ public class Cylinder extends Circle {
         System.out.println("Here is the result: ");
         System.out.printf("Surface Area: %.2f - Total Area: %.2f - Volume: %.2f \n \n"
                 , getSurfaceArea(), getTotalArea(), getVolume());
+    }
+
+    @Override
+    public void testCase() {
+        //Test class geometric.cylinder.Cylinder
+        Geometric cylinder = new Cylinder();
+        System.out.println(cylinder);
+        cylinder = new Cylinder(8);
+        System.out.println(cylinder);
+        cylinder = new Cylinder(3.6, 10);
+        System.out.println(cylinder);
+        cylinder = new Cylinder("black", true, 2.1, 20);
+        System.out.println(cylinder);
+        System.out.println();
     }
 }
