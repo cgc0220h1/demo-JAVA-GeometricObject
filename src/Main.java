@@ -27,8 +27,7 @@ public class Main {
                     && choice != 6) {
                 System.out.println("Invalid choice! Please choose again.");
                 System.out.println();
-
-            } else {
+            } else if (choice != 0) {
 
                 switch (choice) {
                     case 1:
@@ -46,16 +45,15 @@ public class Main {
                     case 5:
                         shape = new Cylinder();
                         break;
-                    case 0:
-                        System.out.println("Exit program!");
-                        isExit = true;
-                        break;
                     case 6:
                         shape.testCase();
                         break;
                 }
                 shape.inputData();
                 shape.displayData();
+            } else {
+                System.out.println("Exit program!");
+                isExit = true;
             }
         } while (!isExit);
     }

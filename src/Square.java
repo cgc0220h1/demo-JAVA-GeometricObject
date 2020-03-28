@@ -1,4 +1,4 @@
-public class Square extends Geometric implements IGeometric {
+public class Square extends Geometric {
     private double side;
     private static final int COEFFICIENT = 4;
 

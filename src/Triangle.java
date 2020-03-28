@@ -1,4 +1,4 @@
-public class Triangle extends Geometric implements IGeometric {
+public class Triangle extends Geometric {
     private double side1;
     private double side2;
     private double side3;

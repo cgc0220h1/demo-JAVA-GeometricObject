@@ -1,4 +1,4 @@
-public class Rectangle extends Geometric implements IGeometric {
+public class Rectangle extends Geometric {
     private double width;
     private double length;
     private static final int COEFFICIENT = 2;
