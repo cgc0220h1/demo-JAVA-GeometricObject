@@ -20,13 +20,13 @@ public class Square extends Geometric {
         return super.getFilled();
     }
 
+    public double getSide() {
+        return side;
+    }
+
     @Override
     public String getColor() {
         return super.getColor();
-    }
-
-    public double getSide() {
-        return side;
     }
 
     @Override
@@ -39,6 +39,10 @@ public class Square extends Geometric {
         return side * 4;
     }
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
     @Override
     public void setColor(String color) {
         super.setColor(color);
@@ -47,10 +51,6 @@ public class Square extends Geometric {
     @Override
     public void setFilled(boolean filled) {
         super.setFilled(filled);
-    }
-
-    public void setSide(double side) {
-        this.side = side;
     }
 
     @Override

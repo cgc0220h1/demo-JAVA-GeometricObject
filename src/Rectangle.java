@@ -19,6 +19,14 @@ public class Rectangle extends Geometric {
         this.length = length;
     }
 
+    public double getLength() {
+        return length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
     @Override
     public String getColor() {
         return super.getColor();
@@ -27,14 +35,6 @@ public class Rectangle extends Geometric {
     @Override
     public boolean getFilled() {
         return super.getFilled();
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public double getWidth() {
-        return width;
     }
 
     @Override
@@ -47,6 +47,14 @@ public class Rectangle extends Geometric {
         return (width + length) * 2;
     }
 
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
     @Override
     public void setFilled(boolean filled) {
         super.setFilled(filled);
@@ -55,14 +63,6 @@ public class Rectangle extends Geometric {
     @Override
     public void setColor(String color) {
         super.setColor(color);
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
     }
 
     @Override

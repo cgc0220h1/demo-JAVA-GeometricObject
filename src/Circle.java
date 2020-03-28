@@ -16,6 +16,10 @@ public class Circle extends Geometric {
         this.radius = radius;
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
     @Override
     public boolean getFilled() {
         return super.getFilled();
@@ -24,10 +28,6 @@ public class Circle extends Geometric {
     @Override
     public String getColor() {
         return super.getColor();
-    }
-
-    public double getRadius() {
-        return radius;
     }
 
     public double getDiameter() {
@@ -44,6 +44,10 @@ public class Circle extends Geometric {
         return getDiameter() * PI;
     }
 
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
     @Override
     public void setColor(String color) {
         super.setColor(color);
@@ -52,10 +56,6 @@ public class Circle extends Geometric {
     @Override
     public void setFilled(boolean filled) {
         super.setFilled(filled);
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
     }
 
     @Override

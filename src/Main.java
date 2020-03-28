@@ -33,5 +33,16 @@ public class Main {
         square = new Square("yellow", true, 5.8);
         System.out.println(square);
         System.out.println();
+
+        //Test class Cylinder
+        Cylinder cylinder = new Cylinder();
+        System.out.println(cylinder);
+        cylinder = new Cylinder(8);
+        System.out.println(cylinder);
+        cylinder = new Cylinder(3.6,10);
+        System.out.println(cylinder);
+        cylinder = new Cylinder("black", true, 2.1,20);
+        System.out.println(cylinder);
+        System.out.println();
     }
 }
