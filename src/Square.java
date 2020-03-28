@@ -66,11 +66,13 @@ public class Square extends Geometric {
                 + super.decimalFormat.format(getArea());
     }
 
+    @Override
     public void inputData() {
         System.out.print("Enter side: ");
         setSide(super.scanner.nextDouble());
     }
 
+    @Override
     public void displayData() {
         System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
     }

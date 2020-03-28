@@ -97,6 +97,7 @@ public class Triangle extends Geometric {
                 + super.decimalFormat.format(getArea());
     }
 
+    @Override
     public void inputData() {
         System.out.print("Enter side 1: ");
         setSide1(super.scanner.nextDouble());
@@ -106,6 +107,7 @@ public class Triangle extends Geometric {
         setSide3(super.scanner.nextDouble());
     }
 
+    @Override
     public void displayData() {
         System.out.printf("Perimeter: %.2f - Area: %.2f \n \n",getPerimeter(),getArea());
     }
