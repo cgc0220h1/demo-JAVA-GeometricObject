@@ -1,11 +1,8 @@
 package geometric.cylinder;
-
-import geometric.Geometric;
 import geometric.circle.Circle;
 
 public class Cylinder extends Circle {
     private double height;
-    private static final int COEFFICIENT = 2;
 
     public Cylinder() {
         height = 1.0;
@@ -29,35 +26,13 @@ public class Cylinder extends Circle {
         return height;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     @Override
     public double getRadius() {
         return super.getRadius();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public boolean getFilled() {
-        return super.getFilled();
-    }
-
-    public double getSurfaceArea() {
-        return super.getPerimeter() * height;
-    }
-
-    public double getTotalArea() {
-        return getSurfaceArea() + super.getArea() * COEFFICIENT;
-    }
-
-    public double getVolume() {
-        return super.getArea() * height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
     }
 
     @Override
@@ -66,8 +41,18 @@ public class Cylinder extends Circle {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
     public void setColor(String color) {
         super.setColor(color);
+    }
+
+    @Override
+    public boolean getFilled() {
+        return super.getFilled();
     }
 
     @Override
@@ -83,40 +68,6 @@ public class Cylinder extends Circle {
                 + super.getRadius()
                 + "\n"
                 + "Which is a subclass of "
-                + super.toString()
-                + "\n"
-                + "Surface area = "
-                + super.decimalFormat.format(getSurfaceArea())
-                + " - Total area = "
-                + super.decimalFormat.format(getTotalArea())
-                + " - Volume = "
-                + super.decimalFormat.format(getVolume());
-    }
-
-    @Override
-    public void inputData() {
-        super.inputData();
-        System.out.print("Enter height: ");
-        setHeight(super.scanner.nextDouble());
-    }
-
-    @Override
-    public void displayData() {
-        System.out.printf("Surface Area: %.2f - Total Area: %.2f - Volume: %.2f \n \n"
-                , getSurfaceArea(), getTotalArea(), getVolume());
-    }
-
-    @Override
-    public void testCase() {
-        //Test class geometric.cylinder.Cylinder
-        Geometric cylinder = new Cylinder();
-        System.out.println(cylinder);
-        cylinder = new Cylinder(8);
-        System.out.println(cylinder);
-        cylinder = new Cylinder(3.6, 10);
-        System.out.println(cylinder);
-        cylinder = new Cylinder("black", true, 2.1, 20);
-        System.out.println(cylinder);
-        System.out.println();
+                + super.toString();
     }
 }

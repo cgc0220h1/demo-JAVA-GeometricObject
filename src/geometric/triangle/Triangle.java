@@ -39,30 +39,6 @@ public class Triangle extends Geometric {
         return side3;
     }
 
-    @Override
-    public boolean getFilled() {
-        return super.getFilled();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public double getPerimeter() {
-        return side1 + side2 + side3;
-    }
-
-    @Override
-    public double getArea() {
-        double halfPerimeter = getPerimeter() / 2;
-        return Math.sqrt(halfPerimeter
-                * (halfPerimeter - side1)
-                * (halfPerimeter - side2)
-                * (halfPerimeter - side3));
-    }
-
     public void setSide1(double side1) {
         this.side1 = side1;
     }
@@ -76,8 +52,18 @@ public class Triangle extends Geometric {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
     public void setColor(String color) {
         super.setColor(color);
+    }
+
+    @Override
+    public boolean getFilled() {
+        return super.getFilled();
     }
 
     @Override
@@ -94,38 +80,6 @@ public class Triangle extends Geometric {
                 + " , side3 = "
                 + side3
                 + ", which is a subclass of "
-                + super.toString()
-                + "\n"
-                + "Perimeter = "
-                + super.decimalFormat.format(getPerimeter())
-                + " - Area = "
-                + super.decimalFormat.format(getArea());
-    }
-
-    @Override
-    public void inputData() {
-        System.out.print("Enter side 1: ");
-        setSide1(super.scanner.nextDouble());
-        System.out.print("Enter side 2: ");
-        setSide2(super.scanner.nextDouble());
-        System.out.print("Enter side 3: ");
-        setSide3(super.scanner.nextDouble());
-    }
-
-    @Override
-    public void displayData() {
-        System.out.printf("Perimeter: %.2f - Area: %.2f \n \n", getPerimeter(), getArea());
-    }
-
-    @Override
-    public void testCase() {
-        //Test class geometric.triangle.Triangle
-        Geometric triangle = new Triangle();
-        System.out.println(triangle);
-        triangle = new Triangle(3, 4, 5);
-        System.out.println(triangle);
-        triangle = new Triangle("pink", false, 3, 4, 5);
-        System.out.println(triangle);
-        System.out.println();
+                + super.toString();
     }
 }

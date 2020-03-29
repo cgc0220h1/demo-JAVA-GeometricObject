@@ -1,35 +1,28 @@
 package geometric;
 
-import control.IGeometric;
-
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public abstract class Geometric implements IGeometric {
+public abstract class Geometric {
     private String color;
     private boolean filled;
     protected DecimalFormat decimalFormat = new DecimalFormat("0.00");
-    protected Scanner scanner = new Scanner(System.in);
 
-    public boolean getFilled() {
+    protected boolean getFilled() {
         return filled;
     }
 
-    public String getColor() {
+    protected String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    protected void setColor(String color) {
         this.color = color;
     }
 
-    public void setFilled(boolean filled) {
+    protected void setFilled(boolean filled) {
         this.filled = filled;
     }
-
-    protected abstract double getArea();
-
-    protected abstract double getPerimeter();
 
     @Override
     public String toString() {

@@ -1,18 +1,14 @@
-import geometric.*;
-import geometric.circle.Circle;
-import geometric.cylinder.Cylinder;
-import geometric.rectangle.Rectangle;
-import geometric.square.Square;
-import geometric.triangle.Triangle;
+import handle.calculator.*;
+import handle.comparator.CircleComparator;
+import testcase.*;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Geometric shape = null;
+        Calculator calculator = null;
+        TestCase testCase = null;
         int choice;
         boolean isExit = false;
 
@@ -37,37 +33,47 @@ public class Main {
             }
             switch (choice) {
                 case 1:
-                    shape = new Rectangle();
+                    calculator = new RectangleCalculator();
+                    testCase = new RectangleTest();
                     System.out.println("1. Calculate");
-                    System.out.println("2. Test case");
+                    System.out.println("2. Compare");
+                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 2:
-                    shape = new Square();
+                    calculator = new SquareCalculator();
+                    testCase = new SquareTest();
                     System.out.println("1. Calculate");
-                    System.out.println("2. Test case");
+                    System.out.println("2. Compare");
+                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 3:
-                    shape = new Triangle();
+                    calculator = new TriangleCalculator();
+                    testCase = new TriangleTest();
                     System.out.println("1. Calculate");
-                    System.out.println("2. Test case");
+                    System.out.println("2. Compare");
+                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 4:
-                    shape = new Circle();
+                    calculator = new CircleCalculator();
+                    testCase = new CircleTest();
                     System.out.println("1. Calculate");
-                    System.out.println("2. Test case");
+                    System.out.println("2. Compare");
+                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 5:
-                    shape = new Cylinder();
+                    calculator = new CylinderCalculator();
+                    testCase = new CylinderTest();
                     System.out.println("1. Calculate");
-                    System.out.println("2. Test case");
+                    System.out.println("2. Compare");
+                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
@@ -75,34 +81,19 @@ public class Main {
                     System.out.println("Exit Program!");
                     isExit = true;
             }
-            if (shape != null) {
-                switch (choice) {
-                    case 1:
-                        shape.inputData();
-                        shape.displayData();
-                        break;
-                    case 2:
-                        shape.testCase();
-                        break;
-                }
+            switch (choice) {
+                case 1:
+                    calculator.inputData();
+                    calculator.displayData();
+                    break;
+                case 2:
+                    Calculator comparator = new CircleComparator();
+                    comparator.inputData();
+                    break;
+                case 3:
+                    testCase.displayCase();
+                    break;
             }
         } while (!isExit);
-        Circle[] circles = new Circle[3];
-        circles[0] = new Circle(3.6);
-        circles[1] = new Circle();
-        circles[2] = new Circle("indigo",false,3.5);
-
-        System.out.println("Pre-sorted:");
-        for (Circle circle : circles) {
-            System.out.println(circle);
-        }
-
-        Comparator circleComparator = new CircleComparator();
-        Arrays.sort(circles, circleComparator);
-
-        System.out.println("After-sorted:");
-        for (Circle circle : circles) {
-            System.out.println(circle);
-        }
     }
 }
