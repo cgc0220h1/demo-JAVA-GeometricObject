@@ -1,8 +1,8 @@
 package handle.calculator;
 
 import geometric.rectangle.Rectangle;
-import io.inputData;
-import io.outputData;
+import handle.io.inputData;
+import handle.io.outputData;
 
 public class RectangleCalculator extends Calculator implements inputData, outputData {
     private Rectangle rectangle = new Rectangle();

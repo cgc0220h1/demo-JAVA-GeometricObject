@@ -1,8 +1,8 @@
 package handle.calculator;
 
 import geometric.square.Square;
-import io.inputData;
-import io.outputData;
+import handle.io.inputData;
+import handle.io.outputData;
 
 public class SquareCalculator extends Calculator implements inputData, outputData {
     Square square = new Square();

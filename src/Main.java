@@ -1,5 +1,6 @@
 import handle.calculator.*;
-import handle.comparator.CircleComparator;
+import handle.io.inputData;
+import handle.io.outputData;
 import testcase.*;
 
 import java.util.Scanner;
@@ -8,7 +9,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = null;
-        TestCase testCase = null;
         int choice;
         boolean isExit = false;
 
@@ -34,46 +34,36 @@ public class Main {
             switch (choice) {
                 case 1:
                     calculator = new RectangleCalculator();
-                    testCase = new RectangleTest();
                     System.out.println("1. Calculate");
                     System.out.println("2. Compare");
-                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 2:
                     calculator = new SquareCalculator();
-                    testCase = new SquareTest();
                     System.out.println("1. Calculate");
                     System.out.println("2. Compare");
-                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 3:
                     calculator = new TriangleCalculator();
-                    testCase = new TriangleTest();
                     System.out.println("1. Calculate");
                     System.out.println("2. Compare");
-                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 4:
                     calculator = new CircleCalculator();
-                    testCase = new CircleTest();
                     System.out.println("1. Calculate");
                     System.out.println("2. Compare");
-                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
                 case 5:
                     calculator = new CylinderCalculator();
-                    testCase = new CylinderTest();
                     System.out.println("1. Calculate");
                     System.out.println("2. Compare");
-                    System.out.println("3. Test case");
                     System.out.println("Enter choice: ");
                     choice = scanner.nextInt();
                     break;
@@ -83,15 +73,10 @@ public class Main {
             }
             switch (choice) {
                 case 1:
-                    calculator.inputData();
-                    calculator.displayData();
+                    ((inputData) calculator).inputData();
+                    ((outputData) calculator).displayData();
                     break;
                 case 2:
-                    Calculator comparator = new CircleComparator();
-                    comparator.inputData();
-                    break;
-                case 3:
-                    testCase.displayCase();
                     break;
             }
         } while (!isExit);

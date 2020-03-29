@@ -1,8 +1,8 @@
 package handle.calculator;
 
 import geometric.triangle.Triangle;
-import io.inputData;
-import io.outputData;
+import handle.io.inputData;
+import handle.io.outputData;
 
 public class TriangleCalculator extends Calculator implements inputData, outputData {
     Triangle triangle = new Triangle();

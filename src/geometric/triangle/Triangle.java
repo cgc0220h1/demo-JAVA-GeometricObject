@@ -73,7 +73,7 @@ public class Triangle extends Geometric {
 
     @Override
     public String toString() {
-        return "A geometric.triangle.Triangle with side1 = "
+        return "A Triangle with side1 = "
                 + side1
                 + ", side2 = "
                 + side2

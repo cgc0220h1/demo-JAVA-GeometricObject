@@ -62,7 +62,7 @@ public class Cylinder extends Circle {
 
     @Override
     public String toString() {
-        return "A geometric.cylinder.Cylinder with height = "
+        return "A Cylinder with height = "
                 + height
                 + " and radius = "
                 + super.getRadius()

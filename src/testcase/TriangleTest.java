@@ -3,9 +3,8 @@ package testcase;
 import geometric.Geometric;
 import geometric.triangle.Triangle;
 
-public class TriangleTest extends TestCase {
-    @Override
-    public void displayCase() {
+public class TriangleTest {
+    public static void main(String[] args) {
         //Test class geometric.triangle.Triangle
         Geometric triangle = new Triangle();
         System.out.println(triangle);

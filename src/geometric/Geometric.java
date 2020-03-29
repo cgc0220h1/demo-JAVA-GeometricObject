@@ -1,12 +1,8 @@
 package geometric;
 
-import java.text.DecimalFormat;
-import java.util.Scanner;
-
 public abstract class Geometric {
     private String color;
     private boolean filled;
-    protected DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     protected boolean getFilled() {
         return filled;

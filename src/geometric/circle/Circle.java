@@ -49,7 +49,7 @@ public class Circle extends Geometric {
 
     @Override
     public String toString() {
-        return "A geometric.circle.Circle with radius = "
+        return "A Circle with radius = "
                 + radius
                 + ", which is a subclass of "
                 + super.toString();

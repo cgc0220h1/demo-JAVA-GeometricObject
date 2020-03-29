@@ -1,8 +1,8 @@
 package handle.calculator;
 
 import geometric.cylinder.Cylinder;
-import io.inputData;
-import io.outputData;
+import handle.io.inputData;
+import handle.io.outputData;
 
 public class CylinderCalculator extends CircleCalculator implements inputData, outputData {
     private Cylinder cylinder = new Cylinder();
