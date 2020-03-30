@@ -1,7 +1,6 @@
 package handle.comparator;
 
 import geometric.square.Square;
-
 import java.util.Comparator;
 
 public class SquareComparator implements Comparator<Square> {

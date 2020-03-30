@@ -3,11 +3,12 @@ package testcase;
 import geometric.Geometric;
 import geometric.circle.Circle;
 import handle.comparator.CircleComparator;
+import handle.editor.resizeable.CircleResizeable;
 
 import java.util.Arrays;
 
 public class CircleTest {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         //Test object
         Geometric circleObject = new Circle();
         System.out.println(circleObject);
@@ -21,11 +22,11 @@ public class CircleTest {
         Circle[] circles = new Circle[3];
         circles[0] = new Circle(3.6);
         circles[1] = new Circle();
-        circles[2] = new Circle("indigo",false,3.5);
+        circles[2] = new Circle("indigo", false, 3.5);
 
         System.out.println("Pre-sorted:");
-        for (Circle circle1 : circles) {
-            System.out.println(circleObject);
+        for (Circle circle : circles) {
+            System.out.println(circle);
         }
 
         CircleComparator circleComparator = new CircleComparator();
@@ -35,13 +36,19 @@ public class CircleTest {
         for (Circle circle : circles) {
             System.out.println(circle);
         }
-    }
 
-    public void displayResizeable() {
+        //Test resizeable
+        System.out.println("Test Resizeable");
+        circles = new Circle[100];
+        for (int index = 0; index < circles.length; index++) {
+            circles[index] = new Circle();
+        }
 
-    }
-
-    public void displayColorable() {
-
+        CircleResizeable circleResizeable = new CircleResizeable();
+        for (Circle circle : circles) {
+            circleResizeable.setPercent(Math.random() + 1);
+            circleResizeable.resize(circle);
+            System.out.println(circle);
+        }
     }
 }

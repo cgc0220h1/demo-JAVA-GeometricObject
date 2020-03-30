@@ -1,8 +1,11 @@
 package testcase;
 
 import geometric.Geometric;
+import geometric.circle.Circle;
 import geometric.rectangle.Rectangle;
 import handle.comparator.RectangleComparator;
+import handle.editor.resizeable.CircleResizeable;
+import handle.editor.resizeable.RectangleResizeable;
 
 import java.util.Arrays;
 
@@ -34,6 +37,20 @@ public class RectangleTest {
 
         System.out.println("After-sorted:");
         for (Rectangle rectangle : rectangles) {
+            System.out.println(rectangle);
+        }
+
+        //Test resizeable
+        System.out.println("Test Resizeable");
+        rectangles = new Rectangle[100];
+        for (int index = 0; index < rectangles.length; index++) {
+            rectangles[index] = new Rectangle();
+        }
+
+        RectangleResizeable rectangleResizeable = new RectangleResizeable();
+        for (Rectangle rectangle : rectangles) {
+            rectangleResizeable.setPercent(Math.random() + 1);
+            rectangleResizeable.resize(rectangle);
             System.out.println(rectangle);
         }
     }

@@ -1,7 +1,6 @@
 package handle.comparator;
 
 import geometric.cylinder.Cylinder;
-import handle.calculator.CylinderCalculator;
 import java.util.Comparator;
 
 public class CylinderComparator implements Comparator<Cylinder> {

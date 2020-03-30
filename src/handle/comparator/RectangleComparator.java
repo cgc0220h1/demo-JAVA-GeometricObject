@@ -1,8 +1,6 @@
 package handle.comparator;
 
 import geometric.rectangle.Rectangle;
-import handle.calculator.RectangleCalculator;
-
 import java.util.Comparator;
 
 public class RectangleComparator implements Comparator<Rectangle> {

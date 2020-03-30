@@ -1,8 +1,8 @@
 package handle.editor.resizeable;
 
-import geometric.circle.Circle;
+import geometric.square.Square;
 
-public class CircleResizeable implements Resizeable<Circle> {
+public class SquareResizeable implements Resizeable<Square> {
     private double percent;
 
     public double getPercent() {
@@ -14,7 +14,7 @@ public class CircleResizeable implements Resizeable<Circle> {
     }
 
     @Override
-    public void resize(Circle circle) {
-        circle.setRadius(circle.getRadius() * percent);
+    public void resize(Square square) {
+        square.setSide(square.getSide() * percent);
     }
 }

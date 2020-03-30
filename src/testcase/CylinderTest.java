@@ -1,8 +1,11 @@
 package testcase;
 
 import geometric.Geometric;
+import geometric.circle.Circle;
 import geometric.cylinder.Cylinder;
 import handle.comparator.CylinderComparator;
+import handle.editor.resizeable.CircleResizeable;
+import handle.editor.resizeable.CylinderResizeable;
 
 import java.util.Arrays;
 
@@ -35,6 +38,20 @@ public class CylinderTest {
 
         System.out.println("After-sorted:");
         for (Cylinder cylinder : cylinders) {
+            System.out.println(cylinder);
+        }
+
+        //Test resizeable
+        System.out.println("Test Resizeable");
+        cylinders = new Cylinder[100];
+        for (int index = 0; index < cylinders.length; index++) {
+            cylinders[index] = new Cylinder();
+        }
+
+        CylinderResizeable cylinderResizeable = new CylinderResizeable();
+        for (Cylinder cylinder : cylinders) {
+            cylinderResizeable.setPercent(Math.random() + 1);
+            cylinderResizeable.resize(cylinder);
             System.out.println(cylinder);
         }
     }

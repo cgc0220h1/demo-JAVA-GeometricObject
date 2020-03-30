@@ -1,4 +1,5 @@
 package handle.editor.resizeable;
 
-public class Resizeable {
+interface Resizeable<T> {
+    void resize(T object);
 }

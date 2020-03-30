@@ -1,8 +1,11 @@
 package testcase;
 
 import geometric.Geometric;
+import geometric.circle.Circle;
 import geometric.square.Square;
 import handle.comparator.SquareComparator;
+import handle.editor.resizeable.CircleResizeable;
+import handle.editor.resizeable.SquareResizeable;
 
 import java.util.Arrays;
 
@@ -29,12 +32,25 @@ public class SquareTest {
         }
 
         SquareComparator squareComparator = new SquareComparator();
-        Arrays.sort(squares,squareComparator);
+        Arrays.sort(squares, squareComparator);
 
         System.out.println("After-sorted: ");
         for (Square square : squares) {
             System.out.println(square);
         }
 
+        //Test resizeable
+        System.out.println("Test Resizeable");
+        squares = new Square[100];
+        for (int index = 0; index < squares.length; index++) {
+            squares[index] = new Square();
+        }
+
+        SquareResizeable squareResizeable = new SquareResizeable();
+        for (Square square : squares) {
+            squareResizeable.setPercent(Math.random() + 1);
+            squareResizeable.resize(square);
+            System.out.println(square);
+        }
     }
 }

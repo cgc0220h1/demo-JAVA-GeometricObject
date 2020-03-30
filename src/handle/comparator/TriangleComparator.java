@@ -1,6 +1,5 @@
 package handle.comparator;
 
-import geometric.triangle.Triangle;
 import handle.calculator.TriangleCalculator;
 
 import java.util.Comparator;
