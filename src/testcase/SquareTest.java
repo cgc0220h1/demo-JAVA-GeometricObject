@@ -2,6 +2,7 @@ package testcase;
 
 import geometric.Geometric;
 import geometric.circle.Circle;
+import geometric.rectangle.Rectangle;
 import geometric.square.Square;
 import handle.comparator.SquareComparator;
 import handle.editor.resizeable.CircleResizeable;
@@ -52,5 +53,8 @@ public class SquareTest {
             squareResizeable.resize(square);
             System.out.println(square);
         }
+
+        //Test colorable
+        System.out.println("Test colorable");
     }
 }
